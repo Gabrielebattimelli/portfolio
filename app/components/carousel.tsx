@@ -6,13 +6,13 @@ const Carousel = () => {
     const [activeIndex, setActiveIndex] = useState(0)
     const carouselRef = useRef<HTMLDivElement>(null)
 
-    const items = [ <CustomVideoPlayer
+   const items = [ <CustomVideoPlayer
         src="https://video.gabrielebattimelli.com/LinkedInvideo%201.mp4"
-        poster="/screenshot1.png"
+        poster="https://video.gabrielebattimelli.com/Screenshot1.png"
 
     />, <CustomVideoPlayer
         src="https://video.gabrielebattimelli.com/LinkedInvideo.mp4"
-        poster="/screenshot.png"
+        poster="https://video.gabrielebattimelli.com/Screenshot.png"
     />,] // Placeholder numbers
 
     useEffect(() => {
