@@ -13,7 +13,7 @@ const Carousel = () => {
     />, <CustomVideoPlayer
         src="https://video.gabrielebattimelli.com/LinkedInvideo.mp4"
         poster="https://video.gabrielebattimelli.com/Screenshot.png"
-    />,] // Placeholder numbers
+    />,] // Placeholder numbers 2
 
     useEffect(() => {
         const handleScroll = () => {
