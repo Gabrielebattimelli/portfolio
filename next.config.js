@@ -1,5 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'video.gabrielebattimelli.com',
+                port: '',
+                pathname: '/**',
+            },
+        ],
+    },
     reactStrictMode: false, // Important for React Three Fiber
     webpack: (config, { isServer }) => {
         // Handle GLB files
