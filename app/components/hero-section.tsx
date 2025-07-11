@@ -33,7 +33,7 @@ export default function HeroSection() {
                         src="/gabriele.png"
                         alt="Gabriele Battimelli"
                         fill
-                        className="object-contain object-bottom"
+                        className="object-cover sm:object-contain object-top sm:object-bottom"
                         priority
                     />
                     {/* Overlay for better text readability */}
