@@ -1,32 +1,45 @@
-"use client"
+// app/components/carousel.tsx
+
+"use client";
 import CustomVideoPlayer from "@/app/components/CustomVideoPlayer";
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect } from "react";
 
 const Carousel = () => {
-    const [activeIndex, setActiveIndex] = useState(0)
-    const carouselRef = useRef<HTMLDivElement>(null)
+    const [activeIndex, setActiveIndex] = useState(0);
+    const carouselRef = useRef<HTMLDivElement>(null);
 
-   const items = [ <CustomVideoPlayer
-        src="https://video.gabrielebattimelli.com/LinkedInvideo%201.mp4"
-        poster="https://video.gabrielebattimelli.com/Screenshot1.png"
-
-    />, <CustomVideoPlayer
-        src="https://video.gabrielebattimelli.com/LinkedInvideo.mp4"
-        poster="https://video.gabrielebattimelli.com/Screenshot.png"
-    />,] // Placeholder numbers 2
+    // FIX: Add the required props to the video players in this array
+    const items = [
+        <CustomVideoPlayer
+            src="https://video.gabrielebattimelli.com/LinkedInvideo%201.mp4"
+            poster="https://video.gabrielebattimelli.com/Screenshot1.png"
+            name="Professional Reel Video 1"
+            description="A short professional video clip."
+            uploadDate="2025-07-16T09:00:00+00:00"
+        />,
+        <CustomVideoPlayer
+            src="https://video.gabrielebattimelli.com/LinkedInvideo.mp4"
+            poster="https://video.gabrielebattimelli.com/Screenshot.png"
+            name="Professional Reel Video 2"
+            description="A second short professional video clip."
+            uploadDate="2025-07-17T09:00:00+00:00"
+        />,
+    ];
 
     useEffect(() => {
         const handleScroll = () => {
             if (carouselRef.current) {
-                const index = Math.round(carouselRef.current.scrollLeft / carouselRef.current.offsetWidth)
-                setActiveIndex(index)
+                const index = Math.round(carouselRef.current.scrollLeft / carouselRef.current.offsetWidth);
+                setActiveIndex(index);
             }
-        }
+        };
 
-        carouselRef.current?.addEventListener("scroll", handleScroll)
-        return () => carouselRef.current?.removeEventListener("scroll", handleScroll)
-    }, [])
+        const ref = carouselRef.current;
+        ref?.addEventListener("scroll", handleScroll);
+        return () => ref?.removeEventListener("scroll", handleScroll);
+    }, []);
 
+    // FIX: Ensure this return statement exists and is correct
     return (
         <div className="relative w-screen h-screen overflow-hidden">
             <div
@@ -51,7 +64,7 @@ const Carousel = () => {
                 ))}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Carousel
+export default Carousel;
