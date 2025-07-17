@@ -88,35 +88,45 @@ export default function Home() {
                     <p className="mb-8 text-xs font-normal text-white md:text-sm">
                         I created the app "Adelante for students," which quickly
                         became a top download in Italy, helping high schoolers
-                        share study materials. <br/> Now building startups with my Co-Founder Niall. We just launched our AI powered social media manager called Spreadit.                     </p>
+                        share study materials. <br/> Now building startups with my Co-Founder Niall. We just launched our AI powered social media manager called Spreadit.
+                    </p>
                     <div className="grid grid-cols-2 gap-4">
                         <Image
                             src="/5.png"
                             alt="Flutter and Firebase app development"
                             width={500}
                             height={500}
-                            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+                            className="h-20 w-full rounded-lg object-cover shadow-[...] md:h-44 lg:h-60"
                         />
                         <Image
                             src="/6.png"
                             alt="SpreadIt startup project"
                             width={500}
                             height={500}
-                            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+                            className="h-20 w-full rounded-lg object-cover shadow-[...] md:h-44 lg:h-60"
                         />
+                        {/* FIX: Add the required props here */}
                         <CustomVideoPlayer
                             src="https://video.gabrielebattimelli.com/adelante.mp4"
                             poster="/5.png"
+                            name="Adelante for Students App Demo"
+                            description="A video demonstrating the Adelante app for students."
+                            uploadDate="2025-07-10T08:00:00+00:00"
                         />
+                        {/* FIX: Add the required props here */}
                         <CustomVideoPlayer
                             src="https://video.gabrielebattimelli.com/spreadit.mp4"
                             poster="/6.png"
+                            name="SpreadIt AI Social Media Manager"
+                            description="A video introducing the SpreadIt startup project."
+                            uploadDate="2025-07-15T08:00:00+00:00"
                         />
                     </div>
                 </div>
             ),
         },
     ];
+
     return (
         <div className="relative w-full min-h-screen">
             {/* Hero section with integrated glass icons - LOWER z-index */}
